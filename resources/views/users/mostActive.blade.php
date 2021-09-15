@@ -11,7 +11,7 @@
                     title: "Number of posts"
                 },
                 axisX: {
-                    title: "User"
+                    title: "Username"
                 },
                 data: [{
                     type: "line",

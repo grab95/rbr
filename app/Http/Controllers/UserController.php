@@ -45,10 +45,10 @@ class UserController extends Controller
 
     public function mostActive()
     {
-        $mostActiveUsers = User::mostActiveUsers(3);
+        $mostActiveUsers = User::mostActiveUsers(5);
         $dataPoints = [];
         foreach ($mostActiveUsers as $key => $value) {
-            array_push($dataPoints, ["y" => $value, "label" => $key]);
+            array_push($dataPoints, ["y" => $value, "label" => User::find($key)->username]);
         }
 
 
