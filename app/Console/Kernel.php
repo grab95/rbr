@@ -24,7 +24,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        //Cyclical running of methods
+        $schedule->call('App\Http\Controllers\UserController@addOrUpdate')->daily();
+        $schedule->call('App\Http\Controllers\PostController@addOrUpdate')->daily();
     }
 
     /**

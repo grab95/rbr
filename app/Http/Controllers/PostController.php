@@ -43,7 +43,6 @@ class PostController extends Controller
         $post->save();
     }
 
-
     /**
      * Shows the post details page
      * @param Post $post
