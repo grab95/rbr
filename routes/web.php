@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// User routes
+Route::get('/users', [UserController::class, 'index']);
+Route::get('/users/add-or-update', [UserController::class, 'addOrUpdate']);
+//Route::get('/users/most-active', [UserController::class, 'mostActive'])->name('users.mostActive');
+//Route::get('/users/{user}', [UserController::class, 'show']);
+
