@@ -42,4 +42,24 @@ class UserController extends Controller
         $user = new User($apiUser);
         $user->save();
     }
+
+    public function mostActive()
+    {
+        $mostActiveUsers = User::mostActiveUsers(3);
+        $dataPoints = [];
+        foreach ($mostActiveUsers as $key => $value) {
+            array_push($dataPoints, ["y" => $value, "label" => $key]);
+        }
+
+
+       /* $dataPoints = array(
+            array("y" => 25, "label" => "nazwa"),
+            array("y" => 20, "label" => "Snazsa"),
+        );*/
+
+        return view('users.mostActive', [
+            'dataPoints' => $dataPoints,
+        ]);
+
+    }
 }

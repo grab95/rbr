@@ -55,12 +55,12 @@
 
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{ url('posts') }}"> <b> Posty </b></a>
+                            <a class="nav-link" href="{{ url('posts') }}"> <b> Posts </b></a>
                         </li>
 
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{url('users/ranking')}}"> <b> Najaktywniejsi użytkownicy  </b></a>
+                            <a class="nav-link" href="{{url('users/most-active')}}"> <b> Most active users </b></a>
                         </li>
 
 
