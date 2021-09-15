@@ -8,10 +8,24 @@
                     text: "Users with the most posts in the last week"
                 },
                 axisY: {
-                    title: "Number of posts"
+                    title: "Number of posts",
+                    valueFormatString: "0",
+
                 },
                 axisX: {
                     title: "Username"
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                stepSize: 1,
+
+
+                            }
+                        }]
+                    },
+
                 },
                 data: [{
                     type: "line",
@@ -27,27 +41,26 @@
         <div class="row justify-content-center">
 
 
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
-                <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
-
-                <div class="card-body justify-content-center">
-                    <div>
-                        <div class="alert alert-success alert-block" id="success-info" style="display: none">
-                            <button type="button" class="close" data-dismiss="alert">×</button>
-                            <strong>
-                                <p id="info">
-                                </p>
-                            </strong>
-                        </div>
-
+            <div class="card-body justify-content-center">
+                <div>
+                    <div class="alert alert-success alert-block" id="success-info" style="display: none">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <strong>
+                            <p id="info">
+                            </p>
+                        </strong>
                     </div>
 
-
                 </div>
+
+
             </div>
         </div>
+    </div>
 
 
 
