@@ -27,6 +27,9 @@
     <!-- Styles -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="css/bootstrap-table-expandable.css" rel="stylesheet">
+    <style>
+
+    </style>
 
 
 

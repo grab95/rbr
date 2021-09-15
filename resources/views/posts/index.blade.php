@@ -29,7 +29,7 @@
                     </div>
 
 
-                    <br> <br>
+
 
                     <table class="table table-bordered  table-sm ">
                         <thead>
@@ -76,16 +76,33 @@
 
                         </tbody>
                     </table>
-
+                    <br>
+                    {{$posts->links()}}
 
                 </div>
             </div>
         </div>
     </div>
-    </div>
 
 
+    <style>
 
+        .w-5 {
+            display: none;
+        }
+
+        .leading-5 {
+            margin-top: 10px;
+            margin-left: 75%;
+
+        }
+
+        .z-0 {
+            display: inline;
+            padding: 10px;
+            display: none;
+        }
+    </style>
 
     {{-- <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">--}}
 
