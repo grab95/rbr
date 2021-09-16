@@ -48,10 +48,8 @@ class User extends Model
                 ->count();
         }
 
-        // Top users: [id => number of posts]
-        $topUsersCollection = collect($numberOfPosts)->sortDesc()->take($numberOfUsers);
-        $topUsers = $topUsersCollection->toArray();
+        $topUsers = collect($numberOfPosts)->sortDesc()->take($numberOfUsers);
 
-        return $topUsers;
+        return $topUsers->toArray();;
     }
 }

@@ -16,14 +16,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->action([PostController::class, 'index']);
 });
+
+
 
 // User routes
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/users/add-or-update', [UserController::class, 'addOrUpdate']);
 Route::get('/users/most-active', [UserController::class, 'mostActive'])->name('users.mostActive');
-//Route::get('/users/{user}', [UserController::class, 'show']);
+Route::get('/users/{user}', [UserController::class, 'show']);
 
 
 // Post routes

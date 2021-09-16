@@ -51,14 +51,21 @@ class UserController extends Controller
             array_push($dataPoints, ["y" => $value, "label" => User::find($key)->username]);
         }
 
-
-       /* $dataPoints = array(
-            array("y" => 25, "label" => "nazwa"),
-            array("y" => 20, "label" => "Snazsa"),
-        );*/
-
         return view('users.mostActive', [
             'dataPoints' => $dataPoints,
+        ]);
+
+    }
+
+    /**
+     * Shows the user details page
+     * @param User $user
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function show(User $user)
+    {
+        return view('users.show', [
+            'user' => $user,
         ]);
 
     }

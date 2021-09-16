@@ -32,8 +32,6 @@
     </style>
 
 
-
-
 </head>
 <body>
 <div id="app">
@@ -55,7 +53,7 @@
 
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{ url('posts') }}"> <b> Posts </b></a>
+                            <a class="nav-link" href="{{ url('posts') }}"> <b> All Posts </b></a>
                         </li>
 
 
@@ -64,11 +62,8 @@
                         </li>
 
 
-
                     </ul>
                 </ul>
-
-
 
 
             </div>
@@ -77,6 +72,10 @@
 
     <main class="py-4">
         @yield('content')
+
+
+
+
     </main>
 </div>
 
@@ -92,7 +91,7 @@
     <!-- Copyright -->
     <div class="text-muted">
 
-        <div class="footer-copyright text-center py-3" id="copyright-text"> © Albert Biszta  ©
+        <div class="footer-copyright text-center py-3" id="copyright-text"> © Albert Biszta ©
 
         </div>
 
