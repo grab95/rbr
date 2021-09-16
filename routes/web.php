@@ -22,7 +22,6 @@ Route::get('/', function () {
 
 
 // User routes
-Route::get('/users', [UserController::class, 'index']);
 Route::get('/users/add-or-update', [UserController::class, 'addOrUpdate']);
 Route::get('/users/most-active', [UserController::class, 'mostActive'])->name('users.mostActive');
 Route::get('/users/{user}', [UserController::class, 'show']);

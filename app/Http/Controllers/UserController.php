@@ -12,15 +12,6 @@ class UserController extends Controller
     private $userApiUrl = 'https://jsonplaceholder.typicode.com/users';
 
 
-    public function index()
-    {
-        $users = User::all();
-
-        return view('users.index', [
-            'users' => $users,
-        ]);
-    }
-
     /**
      * Decides whether to update or add
      */
@@ -33,6 +24,7 @@ class UserController extends Controller
         }
     }
 
+
     /**
      * Saves a new user
      * @param $apiUser
@@ -43,6 +35,11 @@ class UserController extends Controller
         $user->save();
     }
 
+
+    /**
+     * Shows a page with a chart of the most active users
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function mostActive()
     {
         $mostActiveUsers = User::mostActiveUsers(5);

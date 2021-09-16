@@ -9,11 +9,8 @@
                     <div class="card-header">
                         <h5 id="group-header">
                             <b> {{$user->name}} </b>
-                            <br>
 
-
-                        </h5>
-
+                        </h5>  <br>
 
                         <b>Email:</b> {{$user->email}} <br>
 
@@ -23,47 +20,32 @@
                         <br>
 
 
+                        <div class="card-header">
+                            <h5 id="group-header">
+                                All posts by {{$user->name}}
 
-                    <div class="card-header">
-                        <h5 id="group-header">
-                            All posts by {{$user->name}}
+                            </h5>
+                            <div>
 
+                                <ul class="list-group">
 
+                                    @foreach($user->posts as $post)
 
+                                        <li class="list-group-item">
+                                            <a style="color: black" href="{{ url('posts', $post->id) }}">
 
-                        </h5>
-                        <div>
+                                                {{$post->title}}
+                                            </a>
+                                        </li>
 
-                            <ul class="list-group">
-
-                                @foreach($user->posts as $post)
-
-                                    <li class="list-group-item">
-                                        <a style="color: black" href="{{ url('posts', $post->id) }}">
-
-                                            {{--   <i class="far fa-address-card fa-lg" style="color: black"></i>--}}
-                                            {{$post->title}}
-                                        </a>
-                                    </li>
+                                    @endforeach
+                                </ul>
 
 
-                                @endforeach
-                            </ul>
-
-
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-
-
-
-
-
-
-
 
 @endsection

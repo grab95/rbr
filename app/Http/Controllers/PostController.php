@@ -11,6 +11,11 @@ class PostController extends Controller
     // URL to external API
     private $postApiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
+
+    /**
+     * Gets all the posts and shows the page with them
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function index()
     {
         $posts = Post::paginate(5);
@@ -36,6 +41,7 @@ class PostController extends Controller
 
     /**
      * Saves a new post
+     * @param $apiPost
      */
     public function addPost($apiPost)
     {
